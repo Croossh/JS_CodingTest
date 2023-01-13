@@ -1,3 +1,7 @@
+interface Idata {
+  [key: string]: number | string;
+}
+
 function solution8(array: number[]): Array<number[]> {
   // 재귀함수
   const getCombinations = function (
@@ -24,17 +28,18 @@ function solution8(array: number[]): Array<number[]> {
   };
 
   const answerArr: Array<number[]> = [];
-  const resultArr: Array<number[]> = getCombinations(array, 7);
-  for (let j = 0; j < resultArr.length; j++) {
-    if (
-      resultArr[j].reduce((acc, curr) => {
-        return acc + curr;
-      }, 0) === 100
-    ) {
-      answerArr.push(resultArr[j]);
+  for (let i = 1; i < array.length; i++) {
+    const resultArr: Array<number[]> = getCombinations(array, i);
+    for (let j = 0; j < resultArr.length; j++) {
+      if (
+        resultArr[j].reduce((acc, curr) => {
+          return acc + curr;
+        }, 0) === 100
+      ) {
+        answerArr.push(resultArr[j]);
+      }
     }
   }
-
   return answerArr;
 }
 
