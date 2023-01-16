@@ -5,7 +5,7 @@ function solution17_1(arr: string[]): string[] {
 
 console.log(solution17_1(["good", "time", "good", "time", "student"]));
 
-// Set을 쓰지 않는 방법
+// 16번과 동일한 방법이기 때문에 Set을 쓰지 않는 방법으로 구현
 function solution17_2(arr: string[]): string[] {
   arr.forEach((base) => {
     for (let i = 1; i < arr.length - 1; i++) {
