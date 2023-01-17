@@ -29,3 +29,18 @@ function solution2_5(arr: number[]): number[] {
 
 console.log(solution2_5([87, 89, 92, 100, 76]));
 console.log(solution2_5([100, 99, 80, 90, 99]));
+
+// 다른 풀이
+function solution2_5_2(arr: number[]): string {
+  let len = arr.length;
+  let answer = Array.from({ length: len }, () => 1);
+  for (let i = 0; i < len; i++) {
+    for (let j = 0; j < len; j++) {
+      if (arr[i] < arr[j]) answer[i]++;
+      //비교했을때 점수가 낮을수록 등수가 밀려나도록
+    }
+  }
+  return answer.join(" ");
+}
+console.log(solution2_5_2([87, 89, 92, 100, 76]));
+console.log(solution2_5([100, 99, 80, 90, 99]));

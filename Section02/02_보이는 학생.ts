@@ -1,9 +1,10 @@
 function solution2_2(arr: number[]): number {
-  let answer: number = 0;
+  let answer: number = 1;
+  let max = arr[0];
   for (let i = 0; i < arr.length; i += 1) {
-    const tmpArr: number[] = arr.slice(i, i + 2);
-    if (tmpArr[0] < tmpArr[1]) {
+    if (max < arr[i]) {
       answer += 1;
+      max = arr[i];
     }
   }
   return answer;
