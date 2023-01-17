@@ -1,8 +1,9 @@
 # 회고
 
 ## <8번 일곱 난장이 문제>
-⏩[8번 문제풀이 보러가기](Section01/08_일곱난쟁이.ts)<br>
-기본 문제는 단하나의 조건만 찾으면 되는 문제였다. 하지만 **욕심이 생겨 모든 경우의 수를 찾아보고 싶었다.**<br>
+⏩[8번 문제풀이 보러가기](https://github.com/Croossh/TS_CodingTest/blob/ea2671ec6a167639639d95968db2c85b31cc3daa/Section01/08_%EC%9D%BC%EA%B3%B1%EB%82%9C%EC%9F%81%EC%9D%B4.ts)<br>
+이 문제는 `9`개의 숫자중 `7`개의 조합이 `100`이 되는 숫자 조합을 찾는 문제이다.<br>
+기본 문제는 단하나의 조건만 찾으면 되는 문제였다. 하지만 **욕심이 생겨 모든 경우의 수를 찾아보고 싶었다.**~~(그래도 정답은 하나였던건 안비밀)~~<br>
 그렇게 해서 경우의 수를 따지는 방법을 알아본 결과, `재귀함수` 와 `조합`을 통해 구하는 방법을 알아냈다.<br>
 
 ```ts
@@ -64,7 +65,7 @@ const arr: number[][] = ...
 <hr>
 
 ## <17번 중복 단어 제거>
-⏩[17번 문제풀이 보러가기](Section01/17_중복단어제거.ts)<br>
+⏩[17번 문제풀이 보러가기](https://github.com/Croossh/TS_CodingTest/blob/ea2671ec6a167639639d95968db2c85b31cc3daa/Section01/17_%EC%A4%91%EB%B3%B5%EB%8B%A8%EC%96%B4%EC%A0%9C%EA%B1%B0.ts)<br>
 ```ts
 const setArr = [...new Set(str)].join("");
 ```
