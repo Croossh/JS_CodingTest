@@ -1,7 +1,7 @@
 #회고
 
 ## <5번 등수 구하기>
-⏩ [5번 풀이 보러가기](Section02/05_등수구하기.ts)<br>
+⏩ [5번 풀이 보러가기](https://github.com/Croossh/TS_CodingTest/blob/fc836404bcf0e3b0db0ad0cf350b8379c72c2784/Section02/02_%EB%B3%B4%EC%9D%B4%EB%8A%94%ED%95%99%EC%83%9D.ts)<br>
 평범한 등수 구하기 문제이다.<br>
 하지만 이중`for`문과 이증 `if`문으로 가독성이 매우 떨어진다.<br>
 지금 까지는 `sort`된 배열과 원본 배열을 비교해서 `index + 1`을 해주는 방식이였다면, 새로운 방법을 알게 되었다.<br>
@@ -27,7 +27,7 @@ for (let i = 0; i < len; i++) {
 
 ## <2번 보이는 학생>
 
-⏩ [2번 풀이 보러가기](Section02/02_보이는학생.ts)<br>
+⏩ [2번 풀이 보러가기](https://github.com/Croossh/TS_CodingTest/blob/fc836404bcf0e3b0db0ad0cf350b8379c72c2784/Section02/05_%EB%93%B1%EC%88%98%EA%B5%AC%ED%95%98%EA%B8%B0.ts)<br>
 이 문제는 사람을 일자로 세워놓았을때 앞의 사람들이 자신보다 작으면 선생님이 볼 수 있고, 그 숫자를 구하는 문제이다.<br>
 
 ### 문제
