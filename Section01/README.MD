@@ -2,10 +2,12 @@
 
 ## <8번 일곱 난장이 문제>
 
-기본 문제는 단하나의 조건만 찾으면 되는 문제였다. 하지만 **욕심이 생겨 모든 경우의 수를 찾아보고 싶었다.**<br>
+⏩[8번 문제풀이 보러가기](https://github.com/Croossh/TS_CodingTest/blob/ea2671ec6a167639639d95968db2c85b31cc3daa/Section01/08_%EC%9D%BC%EA%B3%B1%EB%82%9C%EC%9F%81%EC%9D%B4.ts)<br>
+이 문제는 `9`개의 숫자중 `7`개의 조합이 `100`이 되는 숫자 조합을 찾는 문제이다.<br>
+기본 문제는 단하나의 조건만 찾으면 되는 문제였다. 하지만 **욕심이 생겨 모든 경우의 수를 찾아보고 싶었다.**~~(그래도 정답은 하나였던건 안비밀)~~<br>
 그렇게 해서 경우의 수를 따지는 방법을 알아본 결과, `재귀함수` 와 `조합`을 통해 구하는 방법을 알아냈다.<br>
 
-```ts
+```typescript
 const getCombinations = function (
   selectArr: number[],
   selectNumber: number
@@ -17,7 +19,7 @@ const getCombinations = function (
 
 `재귀함수`는 자기자신을 무한대로 호출하는 함수이기 때문에 반드시 `탈출조건`이 있어야한다.<br>
 
-```ts
+```typescript
 selectArr.forEach((item: number, index: number, origin: number[]) => {
   const rest: number[] = origin.slice(index + 1);
   const combinations: Array<number[]> = getCombinations(rest, selectNumber - 1);
@@ -35,18 +37,18 @@ selectArr.forEach((item: number, index: number, origin: number[]) => {
 
 이 외에도 Type을 지정하는데도 고민이 있었다. 숫자로 만들어진 배열은
 
-```ts
+```typescript
 const arr: number[] = ...
 ```
 
 이와 같이 하면됐으나, 배열안에 숫자로이루어진 배열은 어떻게 설정해야하는지 몰랐다. 알게된 방법은...
 
-```ts
+```typescript
 const arr: number[] = ... // 속기 구문
 const arr: Array<number> = ... // 일반 구문
 ```
 
-```ts
+```typescript
 // 원하는 타입
 // [[1,2,3], [2,3,4], [3,4,5], ...]
 const arr: Array<number[]> = ... // 응용 버젼
@@ -55,7 +57,7 @@ const arr: Array<number[]> = ... // 응용 버젼
 구문의 차이점이 있다는 것을 알게되었고, 일반 구문안에 응용을 함으로써 원하는 타입을 선언할 수 있게 되었다.<br>
 나중에 알게된 충격적인 사실
 
-```ts
+```typescript
 const arr: number[][] = ...
 ```
 
@@ -65,7 +67,9 @@ const arr: number[][] = ...
 
 ## <17번 중복 단어 제거>
 
-```ts
+⏩[17번 문제풀이 보러가기](https://github.com/Croossh/TS_CodingTest/blob/ea2671ec6a167639639d95968db2c85b31cc3daa/Section01/17_%EC%A4%91%EB%B3%B5%EB%8B%A8%EC%96%B4%EC%A0%9C%EA%B1%B0.ts)<br>
+
+```typescript
 const setArr = [...new Set(str)].join("");
 ```
 
