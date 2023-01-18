@@ -1,50 +1,6 @@
 #회고
 
-## <7번 봉우리>
-
-⏩ [7번 풀이 보러가기](https://github.com/Croossh/TS_CodingTest/blob/fc836404bcf0e3b0db0ad0cf350b8379c72c2784/Section02/02_%EB%B3%B4%EC%9D%B4%EB%8A%94%ED%95%99%EC%83%9D.ts)<br>
-5\*5 배열이 주어지고, 각 숫자의 상하좌우보다 클 경우에만 count를 증가하는 문제이다.(다만, 상하좌우에 배열이 없다면 0으로 처리한다)<br>
-<br>
-먼저 상하좌우를 변수에 넣고 작업을 시작했다.<br>
-
-- 의사 코드
-
-```typescript
-i 열의 j번째의 숫자가
-상하: i-1 의 j / i+1 의 j
-좌우: i의 j-1 / i의 j+1
-모두 커야 answer++
-만약 -1 혹은 +1 이 undefined 라면 그거슨 0 임
-```
-
-- 반영 코드
-
-```typescript
-const base = arr[i][j];
-const up = arr[i - 1][j] || 0;
-const down = arr[i + 1][j] || 0;
-const left = arr[i][j - 1] || 0;
-const rigth = arr[i][j + 1] || 0;
-```
-
-하지만 이렇게 했을때엔 문제가 있었다.<br>
-
-1. `arr[i - 1][j] || 0` 으로 앞이 `undefined` 가 나오면 `0` 을 출력하게 해주려고 했지만 앞부분의 `arr[i - 1]`이 `undefined` 가 나오면 뒷부분의 `[j]`를 실행할 수 없기 때문에 에러가 계속 뜨는것을 몰랐다.
-2. `옵셔널 체이닝`으로 `arr[i - 1]?[j]` 와 같이 해주려고 했지만 `옵셔널 체이닝`은 객체에만 적용되는걸로 확인되었다...
-
-- 해결
-
-```typescript
-const base = arr[i][j];
-const up = arr[i - 1] ? arr[i - 1][j] : 0;
-const down = arr[i + 1] ? arr[i + 1][j] : 0;
-const left = arr[i][j - 1] || 0;
-const rigth = arr[i][j + 1] || 0;
-```
-
-앞부분(`arr[i - 1]`)이 `undefined`가 되는 경우에만 삼항연산자로 처리를 해주었다.
-
-## <5번 등수구하기>
+## <5번 등수 구하기>
 
 ⏩ [5번 풀이 보러가기](https://github.com/Croossh/TS_CodingTest/blob/fc836404bcf0e3b0db0ad0cf350b8379c72c2784/Section02/02_%EB%B3%B4%EC%9D%B4%EB%8A%94%ED%95%99%EC%83%9D.ts)<br>
 평범한 등수 구하기 문제이다.<br>

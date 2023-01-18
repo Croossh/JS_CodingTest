@@ -69,7 +69,7 @@ const arr: number[][] = ...
 
 ⏩[17번 문제풀이 보러가기](https://github.com/Croossh/TS_CodingTest/blob/ea2671ec6a167639639d95968db2c85b31cc3daa/Section01/17_%EC%A4%91%EB%B3%B5%EB%8B%A8%EC%96%B4%EC%A0%9C%EA%B1%B0.ts)<br>
 
-```typescript
+```ts
 const setArr = [...new Set(str)].join("");
 ```
 
