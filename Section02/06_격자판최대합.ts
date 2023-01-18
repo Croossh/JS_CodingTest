@@ -9,11 +9,11 @@ function solution2_6(arr: Array<number[]>): number {
 
   // 각 열의 합: 각 열의 합 각 배열의 똑같은 인덱스 순회
   for (let i = 0; i < arr[0].length; i++) {
-    let tmp: number[] = [];
+    const colTmp: number[] = [];
     arr.forEach((item) => {
-      tmp.push(item[i]);
+      colTmp.push(item[i]);
     });
-    const reducedCol = tmp.reduce((acc, curr) => acc + curr, 0);
+    const reducedCol = colTmp.reduce((acc, curr) => acc + curr, 0);
     if (reducedCol > max) max = reducedCol;
   }
 
@@ -33,8 +33,8 @@ function solution2_6(arr: Array<number[]>): number {
   const reducedDia = diaTmp.reduce((acc, curr) => acc + curr, 0);
   const reducedReverseDia = reverseDiaTmp.reduce((acc, curr) => acc + curr, 0);
 
-  const result = Math.max(reducedDia, reducedReverseDia);
-  if (result > max) max = result;
+  const diaResult = Math.max(reducedDia, reducedReverseDia);
+  if (diaResult > max) max = diaResult;
 
   return max;
 }
