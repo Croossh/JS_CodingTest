@@ -1,18 +1,11 @@
 function solution7_5(num: number, arr: number[]): number[] {
-  const cash = Array.from({ length: num }, () => 0);
+  const cache = Array.from({ length: num }, () => 0);
   for (let i = 0; i < arr.length; i++) {
-    const tmp = cash.indexOf(arr[i]);
-    if (tmp > -1) {
-      // 있을때
-      cash.splice(tmp, 1);
-      cash.unshift(arr[i]);
-    } else {
-      // 없을때
-      cash.pop();
-      cash.unshift(arr[i]);
-    }
+    const tmp = cache.indexOf(arr[i]);
+    tmp > -1 ? cache.splice(tmp, 1) : cache.pop();
+    cache.unshift(arr[i]);
   }
-  return cash;
+  return cache;
 }
 
 console.log(solution7_5(5, [1, 2, 3, 2, 6, 2, 3, 5, 7]));
