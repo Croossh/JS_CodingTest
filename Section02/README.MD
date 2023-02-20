@@ -1,4 +1,4 @@
-#회고
+# 회고
 
 ## <5번 등수 구하기>
 ⏩ [5번 풀이 보러가기](https://github.com/Croossh/TS_CodingTest/blob/fc836404bcf0e3b0db0ad0cf350b8379c72c2784/Section02/02_%EB%B3%B4%EC%9D%B4%EB%8A%94%ED%95%99%EC%83%9D.ts)<br>
