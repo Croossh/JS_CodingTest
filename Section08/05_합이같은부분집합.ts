@@ -1,10 +1,22 @@
 function solution8_5(arr: number[]): string {
-  let answer = "";
+  let answer = "NO";
 
-  function DFS(v: number[]) {
-    // 코드
+  const total = arr.reduce((acc, curr) => acc + curr, 0);
+  const size = arr.length;
+  let flag = false;
+  function DFS(L: number, sum: number) {
+    if (flag) return;
+    if (L === size) {
+      if (total - sum === sum) {
+        answer = "YES";
+        flag = true;
+      }
+    } else {
+      DFS(L + 1, sum + arr[L]);
+      DFS(L + 1, sum);
+    }
   }
-  // DFS(v);
+  DFS(0, 0);
   return answer;
 }
 
