@@ -12,3 +12,4 @@
 ⏩ [Section 02 회고록](https://github.com/Croossh/TS_CodingTest/tree/main/Section02)<br>
 ⏩ [Section 03 회고록](https://github.com/Croossh/TS_CodingTest/tree/main/Section03)<br>
 ⏩ [Section 05 회고록](https://github.com/Croossh/TS_CodingTest/tree/main/Section05)<br>
+⏩ [Section 06 회고록](https://github.com/Croossh/TS_CodingTest/tree/main/Section06)<br>
