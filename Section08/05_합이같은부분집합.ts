@@ -3,13 +3,13 @@ function solution8_5(arr: number[]): string {
 
   const total = arr.reduce((acc, curr) => acc + curr, 0);
   const size = arr.length;
-  let flag = false;
+  // let flag = false;
   function DFS(L: number, sum: number) {
-    if (flag) return;
+    if (answer === "YES") return;
     if (L === size) {
       if (total - sum === sum) {
         answer = "YES";
-        flag = true;
+        // flag = true;
       }
     } else {
       DFS(L + 1, sum + arr[L]);
